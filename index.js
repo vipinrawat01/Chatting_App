@@ -28,9 +28,9 @@ const UsersState = {
 
 const io = new Server(expressServer, {
   cors: {
-    origin: '*', // Allows all origins temporarily for testing
-    methods: ["GET", "POST"],
+  origin: true, // Temporarily allow all origins for testing
   },
+
 });
 
 io.on('connection', (socket) => {
